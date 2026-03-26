@@ -289,20 +289,5 @@
 
   window.addEventListener('load', () => setTimeout(runAnimation, 400));
 </script>
- <script>
-  function sendHeight() {
-    var height = document.body.scrollHeight;
-    window.parent.postMessage({ height: height }, '*');
-  }
-
-  // Send on load
-  window.addEventListener('load', sendHeight);
-
-  // Send whenever the window resizes
-  window.addEventListener('resize', sendHeight);
-
-  // Optional: send periodically in case content loads dynamically
-  setInterval(sendHeight, 500);
-</script>
 </body>
 </html>
